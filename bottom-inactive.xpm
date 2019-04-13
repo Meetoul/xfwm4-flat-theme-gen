@@ -1,5 +1,8 @@
 /* XPM */
-static char * bottom_inactive_xpm[] = {
-"8 1 1 1",
-" 	c None",
-"        "};
+static char *bottom_inactive[] = {
+/* columns rows colors chars-per-pixel */
+"4 1 1 1 ",
+"  c None",
+/* pixels */
+"    "
+};
