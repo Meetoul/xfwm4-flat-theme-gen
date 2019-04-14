@@ -98,30 +98,14 @@ HIDE_PATTERN = ( # 30x20
     '..............................',
 )
 
-TITLE_PATTERN = ( # 1x20
-    '.',
-    '.',
-    '.',
-    '.',
-    '.',
-    '.',
-    '.',
-    '.',
-    '.',
-    '.',
-    '.',
-    '.',
-    '.',
-    '.',
-    '.',
-    '.',
-    '.',
-    '.',
-    '.',
-    '.',
-)
+assert len(CLOSE_PATTERN) == len(MAXIMIZE_PATTERN) == len(HIDE_PATTERN), \
+    "Buttons patterns height must be the same!"
 
-BORDER_PATTERN = ['.' * BORDER_THICKNESS for _ in range(BORDER_THICKNESS)]
+TITLE_HEIGHT = len(CLOSE_PATTERN)
+
+TITLE_PATTERN = tuple('.' for _ in range(TITLE_HEIGHT))
+
+BORDER_PATTERN = tuple('.' * BORDER_THICKNESS for _ in range(BORDER_THICKNESS))
 
 FILES_TO_GENERATE = [
     {
