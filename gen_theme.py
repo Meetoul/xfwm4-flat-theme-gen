@@ -1,4 +1,4 @@
-BORDER_THICKNESS = 2
+BORDER_THICKNESS = 0
 
 ACTIVE_COLORS = {
     '.': '#2A373E',
@@ -308,7 +308,7 @@ def norm_pattern(pattern):
 
 def gen_xpm_file_content(name, colors, pattern, char_per_pixel=1):
     height = len(pattern)
-    width = len(pattern[0])
+    width = 0 if height == 0 else len(pattern[0])
     colors_num = len(colors)
 
     name = norm_name(name)
